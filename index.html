@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Project Title</title>
+  <title>Automated Imaging and Frond Tracking of Wolffia globosa</title>
   <link rel="icon" href="./favicon.ico" type="image/x-icon">
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/themes/light.css" />
@@ -21,63 +21,75 @@
 
   <script type="module" src="./components/image/image-component.js"></script>
 
-  <script type="module" src="./components/video/video.js"></script>
-
   <link rel="stylesheet" href="./components/references/references.css">
 
   <link rel="stylesheet" href="./components/scroll-to-top/scroll-to-top.css">
   <script src="./components/scroll-to-top/scroll-to-top.js"></script>
 
   <script src="./components/table-component/table-component.js"></script>
-
-  <link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
 </head>
 
 <body>
   <div class="content">
-    <h1>Project Title</h1>
+    <h1>Automated Time-Lapse Imaging and Frond Tracking of <i>Wolffia globosa</i></h1>
+    <p class="subtitle">Interim progress report, 14 November 2026</p>
 
-    <!-- This is the team member component use to display details about your team members -->
+    <!-- EDIT: replace with your own name, discipline and matriculation year.
+         To use a photo, put it in assets/ and change avatar="assets/avatar.svg" to its file name. -->
     <div class="team-member-wrapper">
-      <team-member avatar="assets/blackranger.png" name="Black" department="Mechanical Engineering"
-        year="1993"></team-member>
-      <team-member avatar="assets/yellowranger.png" name="Yellow" department="Computer Engineering"
-        year="1993"></team-member>
-      <team-member avatar="assets/redranger.png" name="Red" department="Electrical Engineering"
-        year="1993"></team-member>
-      <team-member avatar="assets/pinkranger.png" name="Pink" department="Biomedical Engineering"
-        year="1993"></team-member>
-      <team-member avatar="assets/blueranger.png" name="Blue" department="Chemical Engineering"
-        year="1993"></team-member>
+      <team-member avatar="assets/avatar.svg" name="Your Name" department="Your Discipline"
+        year="Matriculation Year"></team-member>
     </div>
 
-    <!-- This is a divide from the shoelace library for aesthetic purpose -->
     <sl-divider></sl-divider>
 
-    <!-- This is the table-of-content component use to define all of the link directly to each section -->
     <div class="table-of-content">
       <h2>Table of Contents</h2>
       <sl-tree>
         <sl-tree-item expanded>
-          <a href="#section-header-1">1. Section Header 1</a>
-          <sl-tree-item>
-            <a href="#sub-section-1-header-1">1.1. Sub-section Header 1</a>
-          </sl-tree-item>
-          <sl-tree-item>
-            <a href="#sub-section-1-header-2">1.2. Sub-section Header 2</a>
-          </sl-tree-item>
+          <a href="#s1">1. Introduction and value proposition</a>
+          <sl-tree-item><a href="#s1-1">1.1. Context</a></sl-tree-item>
+          <sl-tree-item><a href="#s1-2">1.2. Problem</a></sl-tree-item>
+          <sl-tree-item><a href="#s1-3">1.3. Value proposition</a></sl-tree-item>
         </sl-tree-item>
-
         <sl-tree-item expanded>
-          <a href="#section-header-2">2. Section Header 1</a>
-          <sl-tree-item>
-            <a href="#sub-section-2-header-1">2.1. Sub-section Header 1</a>
-          </sl-tree-item>
-          <sl-tree-item>
-            <a href="#sub-section-2-header-2">2.2. Sub-section Header 2</a>
-          </sl-tree-item>
+          <a href="#s2">2. Existing approaches and research gap</a>
+          <sl-tree-item><a href="#s2-1">2.1. Existing approaches</a></sl-tree-item>
+          <sl-tree-item><a href="#s2-2">2.2. Gap and claimed contribution</a></sl-tree-item>
         </sl-tree-item>
-
+        <sl-tree-item expanded>
+          <a href="#s3">3. Aim, hypotheses and scope</a>
+          <sl-tree-item><a href="#s3-1">3.1. Hypotheses</a></sl-tree-item>
+          <sl-tree-item><a href="#s3-2">3.2. Scope</a></sl-tree-item>
+        </sl-tree-item>
+        <sl-tree-item>
+          <a href="#s4">4. Design specifications</a>
+        </sl-tree-item>
+        <sl-tree-item expanded>
+          <a href="#s5">5. Concept selection and detailed design</a>
+          <sl-tree-item><a href="#s5-1">5.1. Imaging choices compared with alternatives</a></sl-tree-item>
+          <sl-tree-item><a href="#s5-2">5.2. Gantry selection</a></sl-tree-item>
+          <sl-tree-item><a href="#s5-3">5.3. System design</a></sl-tree-item>
+          <sl-tree-item><a href="#s5-4">5.4. Modular interfaces</a></sl-tree-item>
+          <sl-tree-item><a href="#s5-5">5.5. Detection pipeline</a></sl-tree-item>
+        </sl-tree-item>
+        <sl-tree-item expanded>
+          <a href="#s6">6. Prototype fabrication, test methods and preliminary results</a>
+          <sl-tree-item><a href="#s6-1">6.1. Fabrication of the fixed-stand prototype</a></sl-tree-item>
+          <sl-tree-item><a href="#s6-2">6.2. Test methods and protocols</a></sl-tree-item>
+          <sl-tree-item><a href="#s6-3">6.3. Preliminary results</a></sl-tree-item>
+          <sl-tree-item><a href="#s6-4">6.4. Problems found and responses</a></sl-tree-item>
+        </sl-tree-item>
+        <sl-tree-item expanded>
+          <a href="#s7">7. Plan to completion</a>
+          <sl-tree-item><a href="#s7-1">7.1. Gantry build status</a></sl-tree-item>
+          <sl-tree-item><a href="#s7-2">7.2. Milestones</a></sl-tree-item>
+          <sl-tree-item><a href="#s7-3">7.3. Risks and fallbacks</a></sl-tree-item>
+          <sl-tree-item><a href="#s7-4">7.4. Response to interim feedback</a></sl-tree-item>
+        </sl-tree-item>
+        <sl-tree-item>
+          <a href="#s8">8. Conclusion</a>
+        </sl-tree-item>
         <sl-tree-item>
           <a href="#references">References</a>
         </sl-tree-item>
@@ -85,148 +97,642 @@
     </div>
     <sl-divider></sl-divider>
 
-    <div>
-
-      <!-- This is an example of what a section might look like -->
-      <div id="section-header-1">
-        <h2> 1. Section Header 1 </h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna
-          aliqua. Tincidunt ornare massa eget egestas. At tellus at urna condimentum mattis pellentesque id nibh tortor.
-          Elementum sagittis vitae et leo duis ut diam. Morbi tristique senectus et netus et malesuada fames.
-          Suspendisse
-          ultrices gravida dictum fusce ut placerat orci. Risus nullam eget felis eget nunc lobortis mattis aliquam
-          faucibus
-          (Brody, 2007). Eget sit amet tellus cras adipiscing enim eu turpis egestas. Aliquet nibh praesent tristique
-          magna
-          sit amet purus. Adipiscing bibendum est ultricies integer quis auctor elit sed. Fermentum et sollicitudin ac
-          orci
-          phasellus egestas tellus rutrum. At in tellus integer feugiat scelerisque varius morbi enim nunc. Volutpat
-          blandit
-          aliquam etiam erat velit scelerisque in. Id diam maecenas ultricies mi eget mauris pharetra et. Nec dui nunc
-          mattis
-          enim ut tellus elementum sagittis vitae.
-        </p>
-      </div>
-
-      <div id="sub-section-1-header-1">
-        <h3>1.1 Sub-section Header 1</h3>
-        <p>
-          Ultrices dui sapien eget mi. Nunc mi ipsum faucibus vitae aliquet nec ullamcorper sit. Dolor purus non enim
-          praesent elementum facilisis. Lacus vestibulum sed arcu non odio euismod lacinia at. Metus aliquam eleifend mi
-          in nulla. Lacus sed viverra tellus in hac habitasse platea. Varius quam quisque id diam vel quam elementum
-          pulvinar. Eleifend quam adipiscing vitae proin sagittis nisl rhoncus. Diam ut venenatis tellus in metus
-          vulputate. Lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque. Venenatis lectus magna
-          fringilla
-          urna. In nisl nisi scelerisque eu ultrices. Velit egestas dui id ornare arcu odio ut sem nulla. Quam id leo in
-          vitae. Egestas congue quisque egestas diam in arcu cursus euismod quis. Porttitor leo a diam sollicitudin
-          tempor
-          id eu nisl.
-        </p>
-      </div>
-
-      <div id="sub-section-1-header-2">
-        <h3>1.2 Sub-section Header 2</h3>
-        <p>
-          Fermentum dui faucibus in ornare quam viverra orci. Donec ultrices tincidunt arcu non sodales. A diam maecenas
-          sed enim ut sem viverra. Semper viverra nam libero justo laoreet sit. Mi sit amet mauris commodo quis. Auctor
-          augue mauris augue neque gravida in fermentum et. Auctor elit sed vulputate mi sit amet. Maecenas pharetra
-          convallis posuere morbi leo urna. Sem nulla pharetra diam sit amet nisl. Id nibh tortor id aliquet lectus.
-          Nibh
-          nisl condimentum id venenatis a condimentum vitae sapien. Convallis posuere morbi leo urna molestie at
-          elementum.
-        </p>
-
-        <!-- This is an example of how you might use the image component -->
-        <image-component tag="image" source="assets/requirement.png"
-          subtitle="Image 1: iDP suggested pathway"></image-component>
-      </div>
+    <!-- ===================== 1. INTRODUCTION ===================== -->
+    <div id="s1">
+      <h2>1. Introduction and value proposition</h2>
+      <p>This project builds a low-cost instrument that photographs <i>Wolffia globosa</i> cultures automatically and
+        follows individual fronds over days, without moving or touching the plates.</p>
     </div>
 
-
-    <br />
-    <br />
-    <sl-divider></sl-divider>
-    <div>
-      <div id="section-header-2">
-        <h2>2. Section Header 2</h2>
-        <p>
-          Ornare arcu dui vivamus arcu felis bibendum ut tristique et. Mi proin sed libero enim sed faucibus turpis in
-          eu. Odio ut sem nulla pharetra diam sit. Nibh cras pulvinar mattis nunc sed blandit libero. Lacus sed viverra
-          tellus in hac habitasse platea dictumst vestibulum. At augue eget arcu dictum varius duis. Mauris ultrices
-          eros in cursus turpis massa (Lindberg, 1967). Libero nunc consequat interdum varius sit amet mattis. Ut ornare
-          lectus sit amet est placerat in egestas erat. Elementum curabitur vitae nunc sed. Proin nibh nisl condimentum
-          id venenatis a condimentum vitae sapien (Chamberlin et al., 2008). Vitae tempus quam pellentesque nec nam
-          aliquam sem.
-        </p>
-      </div>
-
-      <div id="sub-section-2-header-1">
-        <h3>2.1. Sub-section Header 1</h3>
-        <p>
-          Pellentesque nec nam aliquam sem et tortor consequat. Et netus et malesuada fames ac turpis egestas maecenas.
-          Eu tincidunt tortor aliquam nulla facilisi. Nunc aliquet bibendum enim facilisis gravida. Elementum pulvinar
-          etiam non quam lacus (Moll et al., 2011; Parker & Fox, 2010). Blandit cursus risus at ultrices mi. Arcu dui
-          vivamus arcu felis bibendum ut tristique. Porttitor rhoncus dolor purus non enim praesent elementum facilisis.
-          Mauris in aliquam sem fringilla. Non quam lacus suspendisse faucibus. Tristique senectus et netus et malesuada
-          fames ac. <a href="#image">Link to the image above</a>
-        </p>
-
-        <!-- This is an example of how you might use the video component -->
-        <video-component tag="rick" source="https://www.youtube.com/embed/dQw4w9WgXcQ"
-          subtitle="Video: Never gonna give you up?"></video-component>
-      </div>
-
-      <div id="sub-section-2-header-2">
-        <h3>2.2. Sub-section Header 2</h3>
-        <p>
-          Vitae proin sagittis nisl rhoncus mattis rhoncus urna neque viverra. Dignissim convallis aenean et tortor at
-          risus viverra adipiscing. Facilisi nullam vehicula ipsum a arcu cursus. Adipiscing elit pellentesque
-          habitant
-          morbi tristique senectus et netus. Turpis massa tincidunt dui ut ornare lectus. Suspendisse sed nisi lacus
-          sed. Diam volutpat commodo sed egestas egestas fringilla phasellus faucibus. Ut ornare lectus sit amet est
-          placerat in egestas. Magna fringilla urna porttitor rhoncus. Imperdiet dui accumsan sit amet.
-        </p>
-
-        <!-- This is an example of how you might use the table component -->
-        <table-component subtitle="Table: Demo table">
-          <div id="table-1"></div>
-        </table-component>
-      </div>
+    <div id="s1-1">
+      <h3>1.1. Context</h3>
+      <p><i>Wolffia globosa</i> is among the fastest-growing flowering plants, doubling in about 48 hours, and contains
+        20 to 48% protein by dry weight (Rajesh et al., 2026). The wider capstone theme argues that its cultivation is
+        limited by inherited, surface-bound growing methods rather than by the plant itself. Every pathway in that theme,
+        whether multi-layer growth structures, alternative media or growth models, depends on one thing: measuring
+        growth reliably and often.</p>
     </div>
 
-    <!-- This is an example of how you can use the references component to create references -->
+    <div id="s1-2">
+      <h3>1.2. Problem</h3>
+      <p>Growth in our collaborator's lab (Noemi) is currently measured by moving culture plates to a camera by hand.
+        This has three costs. First, each move disturbs floating fronds, so the same frond cannot be followed from one
+        image to the next. Second, imaging is limited to when a person is available, so growth curves have few points.
+        Third, published duckweed imaging systems mostly report population totals such as frond area or count, which
+        hide how individual fronds behave.</p>
+    </div>
+
+    <div id="s1-3">
+      <h3>1.3. Value proposition</h3>
+      <p>The instrument moves the camera to the plates instead of moving the plates to the camera. Because the plates
+        stay still, the system can record each frond's position, size and colour every 15 minutes for a week. That
+        turns imaging from a population count into individual-level, longitudinal data: when each frond buds, how long
+        that takes and how this varies within a clone.</p>
+      <p>At the interim presentation, the panel argued that the project read as a fix for one user's workflow. They
+        quoted the idea that "science owes more to the steam engine than the steam engine owes to science", meaning
+        that instruments often create the questions science later answers. This report takes that framing on board.
+        The contribution is not the gantry, which is built from known parts, but the new kind of measurement it makes
+        possible. Low cost then becomes experimental capacity, because a lab can run several identical units in
+        parallel (scaling out) where it could afford only one motorised zoom microscope.</p>
+
+      <!-- EDIT: put your full-frame image in assets/ with this exact file name -->
+      <image-component tag="fig-frame" source="assets/Frond_FullFrameofPlate.png"
+        subtitle="Figure 1: One full frame of a plate from the Pi camera, with a zoomed inset of outlined fronds."></image-component>
+    </div>
+
+    <br /><sl-divider></sl-divider>
+
+    <!-- ===================== 2. EXISTING APPROACHES ===================== -->
+    <div id="s2">
+      <h2>2. Existing approaches and research gap</h2>
+      <p>Automated duckweed imaging already exists, but none of the systems reviewed follows individual floating fronds
+        over days while the plates stay in place at low cost.</p>
+    </div>
+
+    <div id="s2-1">
+      <h3>2.1. Existing approaches</h3>
+      <table-component subtitle="Table 1: Existing duckweed imaging approaches">
+        <div class="table-scroll">
+          <table>
+            <tr><th>System</th><th>How it images</th><th>Limitation for this problem</th></tr>
+            <tr><td>Duckbot (Subbaraman et al., 2024)</td><td>Jubilee tool-changing gantry with a top-down Raspberry Pi
+                camera, about 1 min per 24-well plate; HSV saturation threshold</td><td>A person moved plates between
+                the growth chamber and the machine daily, so fronds were disturbed between images</td></tr>
+            <tr><td>Kose et al. (2023)</td><td>Cameras below transparent stages, carried along the plates by a linear
+                actuator inside a walk-in growth chamber; about 6,000 duckweed units over 10 days</td><td>Built for a
+                walk-in room, not a benchtop lab; reports population totals, not individual fronds</td></tr>
+            <tr><td>Cox et al. (2022)</td><td>Motorised Zeiss Axio Zoom.V16 microscope, 12-well plates imaged hourly
+                for 67 h at about 226 px/mm</td><td>High cost; plants were put on agarose because they floated out of
+                view, and <i>W. microscopica</i> still tumbled on it; one colony per well, measured as total area rather
+                than individual fronds</td></tr>
+            <tr><td>Li et al. (2023)</td><td><i>W. australiana</i> grown in 1 mm wide millifluidic PDMS channels inside
+                a camera-equipped incubator; plantlets line up in budding order, so individuals can be followed</td>
+              <td>Follows individuals only by confining them single file in channels; not a tool for free-floating plate
+                cultures</td></tr>
+            <tr><td>Standard tests (OECD, 2006; ISO, 2005)</td><td>7-day tests on <i>Lemna minor</i> or <i>L.
+                  gibba</i>; frond number counted, plus frond area or dry weight, at set days; control fronds must
+                double in under 2.5 days</td><td>Few time points and population totals only</td></tr>
+          </table>
+        </div>
+      </table-component>
+      <p>Two details from this review shaped the design. Cox et al. (2022) stopped lid condensation by coating lids with
+        dilute Triton X-100 in ethanol, which is a candidate fix for fogging seen in this project. They also expected
+        stationary Raspberry Pi systems to give lower image quality, and section 6 tests exactly that claim.</p>
+    </div>
+
+    <div id="s2-2">
+      <h3>2.2. Gap and claimed contribution</h3>
+      <p>The gap this project addresses is <b>individual-level, longitudinal data on floating Wolffia from an
+          instrument cheap enough to replicate</b>. Population growth curves are well established. Following each frond
+        through a week, recording when it buds and which daughter came from which mother, is much rarer, because
+        floating fronds drift, crowd and divide.</p>
+      <p>Neither closest system covers this. Cox et al. (2022) imaged one <i>Lemna minor</i> colony per well on
+        semi-solid medium and measured each colony's total area over 67 hours. They did not follow individual fronds
+        within a colony, record budding or image plants in liquid. Kose et al. (2023) reported population totals
+        only.</p>
+      <p>Two other studies come closer and narrow the claim. Li et al. (2023) followed individual <i>W.
+          australiana</i> plantlets over time, but only by confining them single file in 1 mm channels, where position
+        records the budding order. This project follows fronds floating freely in ordinary plates. Oyeniran et al.
+        (2026) describe Deepweed, software for segmenting and tracking individual duckweed fronds to build lineages.
+        Its imaging setup will be reviewed for the final report: if it already tracks free-floating fronds from
+        automated imaging, the contribution narrows to the low-cost instrument that produces such data without moving
+        plates.</p>
+      <p>This report does <b>not</b> claim that gantry imaging, CoreXY motion, saturation thresholding or watershed
+        segmentation are new. Each is an existing technique, and the contribution lies in combining them to produce
+        data that was not previously practical to collect.</p>
+      <p>The drift data (section 6.3) also show a pattern worth separating out. Fronds within about 5 mm of a wall moved
+        towards it at about 0.043 mm/h, more than twice the 0.018 mm/h further in. This could be the "Cheerios
+        effect", where the curved water surface at a wall (the meniscus) pulls floating objects towards it through
+        surface tension. However, fronds across the whole plate also drifted in one direction, which points to a slight
+        tilt of the plate as the main cause. Subtracting the plate-wide drift before measuring movement towards the
+        walls would show how much of the edge effect is the meniscus.</p>
+    </div>
+
+    <br /><sl-divider></sl-divider>
+
+    <!-- ===================== 3. AIM AND HYPOTHESES ===================== -->
+    <div id="s3">
+      <h2>3. Aim, hypotheses and scope</h2>
+      <p>The aim is to build and evaluate a low-cost gantry imager that detects and tracks individual Wolffia fronds on
+        four stationary plates over a 7-day run, and to report where the method stops working.</p>
+    </div>
+
+    <div id="s3-1">
+      <h3>3.1. Hypotheses</h3>
+      <p>Each hypothesis has a baseline to beat and a measure that could prove it wrong. Thresholds are set from early
+        measurements before the main runs, so the targets are not chosen after seeing the results.</p>
+      <table-component subtitle="Table 2: Hypotheses, baselines and pass thresholds">
+        <div class="table-scroll">
+          <table>
+            <tr><th>ID</th><th>Hypothesis</th><th>Baseline</th><th>Measure</th><th>Pass threshold</th></tr>
+            <tr><td>H1</td><td>The saturation-based detector finds fronds as accurately on gantry frames as on the fixed
+                stand</td><td>Hand counts in Fiji; Otsu threshold alone</td><td>Recall and precision against hand
+                counts</td><td>Both at least 90%</td></tr>
+            <tr><td>H2</td><td>In plates left undisturbed, fronds can be matched between consecutive 15-minute
+                frames</td><td>Manual matching of a sample of fronds</td><td>Share of fronds correctly matched, by frond
+                density</td><td>At least 90% matched per frame</td></tr>
+            <tr><td>H3</td><td>The gantry returns the camera to each saved plate position more repeatably than hand
+                placement</td><td>Hand placement of the plate under the camera</td><td>Median and 95th percentile offset
+                over 20 returns, by phase correlation, in px and mm</td><td>Under 0.1 mm after marker alignment, and
+                better than the hand-placement baseline (both measured at M4)</td></tr>
+            <tr><td>H4</td><td>Gentle gantry moves (low acceleration plus a settle delay) do not move fronds more than
+                resting drift does</td><td>Frond motion between frames with no gantry move</td><td>Frond displacement
+                just after a move versus at rest</td><td>Moves add under 0.1 mm of frond displacement (the per-frame
+                noise level)</td></tr>
+            <tr><td>H5 (exploratory)</td><td>Per-frond tracking yields budding intervals that differ between
+                strains</td><td>Population doubling time from the same runs</td><td>Budding interval per frond,
+                compared across strains with a Kruskal-Wallis test</td><td>Reported as found</td></tr>
+          </table>
+        </div>
+      </table-component>
+      <p>A <b>Kruskal-Wallis test</b> compares groups using the ranks of the values instead of the values themselves.
+        It suits displacement and budding data, which are skewed (most fronds barely move, a few move a lot), so an
+        average would mislead.</p>
+      <p>If H3 or H4 fails, that is still a useful result: it tells the lab that fixed cameras, one per plate, are the
+        better design for this task. Earlier proposals also included hypotheses on image stitching and autofocus during
+        evaporation. Both were dropped once one frame per plate proved to give enough resolution (section 6.3) and
+        focus was locked to keep magnification constant.</p>
+    </div>
+
+    <div id="s3-2">
+      <h3>3.2. Scope</h3>
+      <p><b>In scope</b></p>
+      <ul>
+        <li>A CoreXY gantry carrying a Raspberry Pi camera over four plates on a fixed tray</li>
+        <li>Capture, detection and tracking software, released as open source</li>
+        <li>Validation of each part against a baseline (H1 to H4)</li>
+        <li>At least one full 7-day run on four plates, plus a replicated strain comparison (H5)</li>
+      </ul>
+      <p><b>Out of scope</b></p>
+      <ul>
+        <li>Any claim that results transfer to other species or growth media without testing</li>
+        <li>Biological conclusions beyond what the measured budding intervals and growth rates show</li>
+        <li>Automatic tool changing during a run, which Jubilee and the Duckbot already do</li>
+        <li>Closed-loop intervention such as frond removal, except as a stretch goal (section 7.4)</li>
+      </ul>
+    </div>
+
+    <br /><sl-divider></sl-divider>
+
+    <!-- ===================== 4. SPECIFICATIONS ===================== -->
+    <div id="s4">
+      <h2>4. Design specifications</h2>
+      <p>Six of the ten specifications are already met on the fixed-stand prototype (detection on pilot images only),
+        and the remaining four depend on the gantry, which is being built now. Green cells are met; amber cells are
+        pending.</p>
+      <table-component subtitle="Table 3: Design specifications and status (14 November 2026)">
+        <div class="table-scroll">
+          <table>
+            <tr><th>Specification</th><th>Target</th><th>Why this number</th><th>Status</th></tr>
+            <tr><td>Resolution</td><td>At least 25 px across one frond</td><td>Estimate: below this, the detector may
+                not separate touching fronds (to be confirmed by a downscaling test at M1)</td><td class="met">Met:
+                30.2 px/mm, about 27 to 30 px per frond</td></tr>
+            <tr><td>Capture interval</td><td>One image per plate every 15 min, unattended</td><td>Almost all fronds
+                move under 0.1 mm in 15 min, which keeps matching between frames reliable</td><td class="met">Met on
+                fixed stand: 102 of 102 frames</td></tr>
+            <tr><td>Run length</td><td>7 days, 4 plates</td><td>Matches the length and plate count of Noemi's
+                experiments</td><td class="pending">Pending: longest run 15 h on 1 plate</td></tr>
+            <tr><td>Plates undisturbed</td><td>Plates never moved during a run</td><td>Moving a plate resets every
+                frond's position and breaks tracking</td><td class="met">Met by design (camera moves, not
+                plates)</td></tr>
+            <tr><td>Camera stability</td><td>Under 1 px drift over a run</td><td>Drift above 1 px would look like frond
+                motion</td><td class="met">Met on fixed stand: under 1 px over 15 h</td></tr>
+            <tr><td>Lighting stability</td><td>Under 5% brightness change</td><td>The detector thresholds on colour, so
+                lighting changes could look like plant changes</td><td class="met">Met: under 4%; count changed 0.4% at
+                the largest step</td></tr>
+            <tr><td>Detection</td><td>Recall and precision both at least 90%</td><td>Proposed level, to be agreed with
+                the collaborator's research needs</td><td class="met">Met on pilot: recall 92%, precision 93% on unseen
+                region</td></tr>
+            <tr><td>Tracking</td><td>At least 90% of fronds matched per frame</td><td>Needed for budding intervals to
+                be measurable</td><td class="pending">Likely met: about 58,000 matches over 59 steps against about
+                1,085 fronds per frame, roughly 91% per step (estimate)</td></tr>
+            <tr><td>Reach and payload</td><td>Camera reaches all 4 plates; head carries camera and mount</td><td>Four
+                plates must fit inside the reachable area, which is smaller if the mount sits off-centre</td>
+              <td class="pending">To verify at milestone M3</td></tr>
+            <tr><td>Repeatability and disturbance</td><td>Return error under 0.1 mm after marker alignment; moves add no
+                frond motion</td><td>See H3 and H4</td><td class="pending">To test at milestone M4</td></tr>
+          </table>
+        </div>
+      </table-component>
+    </div>
+
+    <br /><sl-divider></sl-divider>
+
+    <!-- ===================== 5. DESIGN ===================== -->
+    <div id="s5">
+      <h2>5. Concept selection and detailed design</h2>
+      <p>The selected concept is a Raspberry Pi Camera Module 3 carried by a modified open-source CoreXY printer frame
+        (THE 100) over a fixed tray of four plates, with every camera setting locked.</p>
+    </div>
+
+    <div id="s5-1">
+      <h3>5.1. Imaging choices compared with alternatives</h3>
+      <table-component subtitle="Table 4: Imaging choices and alternatives considered">
+        <div class="table-scroll">
+          <table>
+            <tr><th>Choice</th><th>Selected</th><th>Alternatives considered</th><th>Reason</th></tr>
+            <tr><td>Camera</td><td>Pi Camera Module 3, about 30 px/mm</td><td>HQ Camera (about 15% more px per frond,
+                needs 27 cm height); Canon DSLR (about 53 px/mm)</td><td>The Canon is too heavy for a gantry head, and the
+                Module 3 already meets the resolution target</td></tr>
+            <tr><td>Capture</td><td>Full-resolution stills</td><td>Video stream</td><td>Wi-Fi on the Pi Zero 2 W limits
+                streams to about 2 Mbps, which smears fine detail</td></tr>
+            <tr><td>Lighting</td><td>Front light, colour kept</td><td>Backlight</td><td>Backlighting gives sharp outlines
+                but turns fronds into silhouettes, losing the green versus white colour that separates live and dead
+                fronds</td></tr>
+            <tr><td>Detection</td><td>Saturation threshold, watershed and merging of halves</td><td>Otsu threshold
+                alone</td><td>F1 rose from 0.84 to 0.89 (Otsu alone) to 0.93 to 0.96 (full pipeline)</td></tr>
+            <tr><td>Scaling to 4 plates</td><td>One camera on a gantry</td><td>One fixed camera per plate</td><td>One
+                camera gives identical optics for every plate, so differences between plates are not camera
+                differences. Fixed cameras are cheaper (about S$421 versus S$695, section 5.2), so the gantry is chosen
+                for identical optics and room to add plates and modules, not for cost</td></tr>
+          </table>
+        </div>
+      </table-component>
+    </div>
+
+    <div id="s5-2">
+      <h3>5.2. Gantry selection</h3>
+      <p>The key requirement is that the plates never move sideways, which rules out "bed-slinger" printers such as the
+        Ender 3, where the bed moves in Y.</p>
+      <table-component subtitle="Table 5: Gantry options compared">
+        <div class="table-scroll">
+          <table>
+            <tr><th>Option</th><th>Motion</th><th>Work area</th><th>Approx. cost</th><th>Verdict</th></tr>
+            <tr><td>THE 100 (MSzturc, n.d.)</td><td>CoreXY, Klipper firmware; bed moves in Z only</td><td>165 x 165 x
+                150 mm</td><td>About US$471 parts</td><td><b>Selected</b>: fits 4 plates, fully open source, easy to swap
+                the hotend for a camera mount</td></tr>
+            <tr><td>Creality Ender-6</td><td>CoreXY; bed moves in Z only</td><td>250 x 250 x 400 mm</td><td>About
+                US$549 (listing of unknown date)</td><td>Possibly discontinued; closed design is harder to modify</td>
+            </tr>
+            <tr><td>Voron 0</td><td>CoreXY</td><td>120 x 120 x 120 mm</td><td>Near US$400 kit</td><td>Too small for 4
+                plates</td></tr>
+            <tr><td>Jubilee (as in Duckbot)</td><td>CoreXY with automatic tool changing</td><td>300 x 300 x 300 mm</td>
+              <td>About US$1,350 per unit, tools not included</td><td>More capable than needed; costs about three times
+                THE 100 before tools, and tool changing adds build time</td></tr>
+          </table>
+        </div>
+      </table-component>
+      <p>The main trade-off is that THE 100's frame is 3D-printed rather than metal, so it may flex or vibrate more.
+        Repeatability over a week therefore has to be measured (H3), not assumed.</p>
+      <p><b>Cost against fixed cameras.</b> Four fixed Pi camera setups cost about 40% less than the gantry at
+        Singapore retail prices (November 2026). The gantry is therefore justified by identical optics for every plate
+        and by adding plates or tools without adding cameras, not by cost.</p>
+      <table-component subtitle="Table 6: Cost of the gantry against four fixed cameras">
+        <table>
+          <tr><th>Item</th><th>Gantry (1 camera)</th><th>4 fixed cameras</th></tr>
+          <tr><td>Frame and motion parts</td><td>S$450.80</td><td>S$0.00</td></tr>
+          <tr><td>Compute</td><td>S$156.50 (1x Pi 4B 4GB)</td><td>S$107.00 (4x Pi Zero 2 W)</td></tr>
+          <tr><td>Camera Module 3</td><td>S$40.00</td><td>S$160.00</td></tr>
+          <tr><td>Zero camera cables</td><td>S$0.00 (included)</td><td>S$22.72</td></tr>
+          <tr><td>32 GB microSD</td><td>S$18.90</td><td>S$75.60</td></tr>
+          <tr><td>Power supplies</td><td>S$14.00</td><td>S$43.52</td></tr>
+          <tr><td>Printed parts (filament)</td><td>about S$15.00</td><td>about S$12.00</td></tr>
+          <tr><th>Total</th><th>about S$695 (US$540)</th><th>about S$421 (US$327)</th></tr>
+        </table>
+      </table-component>
+    </div>
+
+    <div id="s5-3">
+      <h3>5.3. System design</h3>
+      <p>The system has four parts, and each passes data to the next:</p>
+      <ol>
+        <li><b>Motion.</b> THE 100 frame with the hotend, extruder and heated bed left out, which saves cost and keeps
+          heat away from the plates. The Pi sends G-code moves (the text commands 3D printers understand) to Klipper.
+          Only X and Y are homed during a run, because homing Z on THE 100 would move the bed and the plates. Moves use
+          low acceleration and a settle delay before each photo.</li>
+        <li><b>Imaging head.</b> A printed mount holds the Camera Module 3 at the measured working height of 12 cm.
+          Exposure, gain, white balance and focus are all locked, so frames differ only because the plants changed.
+          Auto exposure would shift colours and break the detector's thresholds, and autofocus would change
+          magnification and therefore measured sizes.</li>
+        <li><b>Plate tray.</b> A printed tray holds four plates level and at the same height, so that one locked focus
+          suits every plate. THE 100 levels its bed by hand, so the tray will be levelled at setup and checked with a
+          short drift run, since section 6.3 showed that a slight tilt makes fronds slide. It also carries a ruler for
+          scale and printed crosses (fiducials) as fixed reference points for measuring drift.</li>
+        <li><b>Software.</b> A scheduler (cron) triggers one cycle every 15 minutes: visit each plate, capture a 12 MP
+          still and log its time and sequence number. Detection runs afterwards and writes one row per frond to
+          <code>fronds.csv</code>, flagging fronds cut by the image edge so later analyses can include or exclude
+          them.</li>
+      </ol>
+      <p>A Raspberry Pi 4B controls the gantry and runs from mains power through the cable chain, because the first long
+        run showed a power bank lasts only about 30 hours.</p>
+      <image-component tag="fig-system" source="assets/system_diagram.png"
+        subtitle="Figure 2: System overview. Top: the Pi runs the 15-minute capture cycle and sends G-code to the printer board running Klipper, which drives the CoreXY steppers that carry the camera over the four fixed plates. Bottom: images flow through the detector into CSV files used for tracking and analysis."></image-component>
+    </div>
+
+    <div id="s5-4">
+      <h3>5.4. Modular interfaces</h3>
+      <p>In response to the panel's question about scale, the head and tray are designed as modules with defined
+        interfaces now, while parts are still being printed. A <b>module</b> here is a part that can be swapped without
+        redesigning the rest, because the points where it connects are fixed. There are four interfaces: a standard
+        mechanical mount on the head, a standard electrical connector down the cable chain, a common software command
+        for "perform your action now" and a shared data format keyed by plate and time. This lets a higher-resolution
+        camera, a fluorescence camera or a different plate format (6-well or 24-well) be fitted later. Tools are swapped
+        by hand between runs using a kinematic mount, which locates a part with balls sitting in grooves so it returns
+        to the same position every time. That is simpler than Jubilee's automatic tool changing, at the cost of one
+        tool per run.</p>
+      <p><b>Motion firmware.</b> The gantry runs Klipper, the open-source firmware THE 100 is designed for, and the Pi
+        sends it standard G-code. Writing custom motion firmware was considered but would add roughly 7 to 11 weeks, so
+        it is left out to keep the time on imaging, tracking and the 7-day runs.</p>
+    </div>
+
+    <div id="s5-5">
+      <h3>5.5. Detection pipeline</h3>
+      <p>Each image is cropped to the plate interior, pulled about 2 mm in from the wall so the wall and the clumps along
+        it are excluded. The pipeline then runs four steps:</p>
+      <ol>
+        <li>Convert to the HSV colour space and keep the saturation channel, where green fronds stand out from the pale
+          background.</li>
+        <li>Threshold with <b>Otsu's method</b>, which picks the cut-off automatically from each image's own histogram,
+          so it adapts to small lighting changes.</li>
+        <li>Separate touching fronds with a two-threshold <b>watershed</b>, which treats the image like a landscape and
+          floods it from markers placed inside each frond.</li>
+        <li>Merge pieces that are probably two halves of one frond: adjacent pieces whose combined area is close to one
+          median frond and whose combined shape is solid (convex).</li>
+      </ol>
+    </div>
+
+    <br /><sl-divider></sl-divider>
+
+    <!-- ===================== 6. PROTOTYPE AND RESULTS ===================== -->
+    <div id="s6">
+      <h2>6. Prototype fabrication, test methods and preliminary results</h2>
+      <p>A fixed-stand prototype validated the camera, capture and detector before the gantry was built, so any problem
+        found later can be traced to the gantry alone.</p>
+    </div>
+
+    <div id="s6-1">
+      <h3>6.1. Fabrication of the fixed-stand prototype</h3>
+      <p>The camera stand was designed in OpenSCAD and printed on a Bambu Lab A1. OpenSCAD describes parts in code, so
+        the design is <b>parametric</b>: changing one setting, such as the dish diameter, resizes the part without
+        redrawing it. The stand has a pocket that puts the plate in the same place every time, a ledge for a ruler
+        (scale) and printed crosses used as fixed references for stability tests. A 10-minute test print of the pocket
+        alone caught a 7 mm sizing error before the full 6-hour print.</p>
+      <p>The stand carries a Raspberry Pi Zero 2 W and a Camera Module 3, with the settings locked as described in
+        section 5.3.</p>
+      <image-component tag="fig-render" source="assets/openscad_render.png"
+        subtitle="Figure 3: OpenSCAD render of the camera stand: base with a locating pocket for the culture container, two printed uprights and a crossbar carrying the camera mount above the plate centre."></image-component>
+      <br />
+      <image-component tag="fig-rig" source="assets/rig_photo.jpg"
+        subtitle="Figure 4: The fixed-stand prototype in use. The Camera Module 3 sits under the crossbar and connects by ribbon cable to the Raspberry Pi Zero 2 W (left, on the power bank used in the first runs). A front LED panel lights the culture."></image-component>
+    </div>
+
+    <div id="s6-2">
+      <h3>6.2. Test methods and protocols</h3>
+      <table-component subtitle="Table 7: Test protocols and sample sizes">
+        <div class="table-scroll">
+          <table>
+            <tr><th>Test</th><th>Protocol</th><th>Sample</th></tr>
+            <tr><td>Resolution</td><td>Photograph a ruler at working height and measure pixels per 20 mm</td><td>1 ruler,
+                3 positions along its length</td></tr>
+            <tr><td>Focus</td><td>Step the lens through its range and score sharpness (variance of the Laplacian, a
+                measure of edge detail) in each region of the plate</td><td>6 regions</td></tr>
+            <tr><td>Detector accuracy</td><td>Hand count every green frond in Fiji (multi-point tool), counting pale
+                yellow-green fronds as alive and edge fronds only if their centre is inside. Tune on region 1, then test
+                unchanged on region 2</td><td>159 fronds: 71 (region 1) and 88 (region 2)</td></tr>
+            <tr><td>Capture reliability</td><td>Scheduled capture every 15 min, checked against the log</td><td>2 runs,
+                102 frames</td></tr>
+            <tr><td>Lighting</td><td>Mean brightness of a fixed white background patch per frame, and 5 rapid shots to
+                check for LED flicker</td><td>Every frame of a full day</td></tr>
+            <tr><td>Rig stability</td><td>Track a fixed patch of the base by <b>phase correlation</b>, which finds the
+                shift between two images to a fraction of a pixel</td><td>15 h run</td></tr>
+            <tr><td>Frond drift</td><td>Match detected fronds between consecutive frames and measure each centre's
+                displacement</td><td>11 h on liquid medium</td></tr>
+          </table>
+        </div>
+      </table-component>
+      <p>Detector accuracy is reported as <b>recall</b> (the share of real fronds found), <b>precision</b> (the share of
+        detections that are real fronds) and <b>F1</b>, which combines the two and is high only when both are high.
+        Region 2 was never used for tuning, so it gives the honest estimate.</p>
+    </div>
+
+    <div id="s6-3">
+      <h3>6.3. Preliminary results</h3>
+      <table-component subtitle="Table 8: Preliminary results on the fixed stand">
+        <div class="table-scroll">
+          <table>
+            <tr><th>Result</th><th>Value</th><th>Meaning</th></tr>
+            <tr><td>Resolution</td><td>30.2 px/mm at 14 cm (pilot setup: 32.0 px/mm, mean frond length 1.03 mm)</td>
+              <td>About 27 to 30 px across a frond, above the 25 px target</td></tr>
+            <tr><td>Detector F1, region 1 (tuning)</td><td>0.887 Otsu alone, 0.910 with watershed, 0.956 with
+                merging</td><td>Each step fixed the previous step's main error</td></tr>
+            <tr><td>Detector F1, region 2 (unseen)</td><td>0.844, 0.913, 0.925; recall 92%, precision 93%</td><td>Meets
+                the 90% target on pilot images</td></tr>
+            <tr><td>Capture</td><td>102 of 102 frames on time</td><td>Scheduling is reliable once power is solved</td>
+            </tr>
+            <tr><td>Lighting</td><td>Brightness varied under 4% over a day</td><td>Count changed only 0.4% at the
+                largest lighting step</td></tr>
+            <tr><td>Rig stability</td><td>Fixed patch moved under 1 px over 15 h</td><td>The method is ready to measure
+                gantry repeatability (H3)</td></tr>
+            <tr><td>Frond drift</td><td>About 1.45 mm in 11 h (about 0.1 mm/h); almost all fronds move under 0.1 mm per
+                15-min frame</td><td>Frame-to-frame tracking is feasible</td></tr>
+            <tr><td>Disturbance</td><td>One accidental table bump moved every frond about 0.5 mm at once</td><td>Gantry
+                moves must be gentle, which motivates H4</td></tr>
+          </table>
+        </div>
+      </table-component>
+
+      <image-component tag="fig-detector" source="assets/detector_progression.png"
+        subtitle="Figure 5: F1 score at each detector step. Region 1 was used for tuning and region 2 only for checking, so region 2's 0.925 is the honest estimate."></image-component>
+      <br />
+      <image-component tag="fig-count" source="assets/count_over_time.png"
+        subtitle="Figure 6: Fronds detected over one day of 15-minute frames, with the Otsu threshold and mean brightness. Because the threshold is recalculated for each frame, the count does not jump at lighting steps such as 17:00. The slow fall of about 3% is probably fronds drifting out of the region of interest, to be confirmed by counting fronds that leave the crop each frame."></image-component>
+      <br />
+      <image-component tag="fig-stability" source="assets/stability.png"
+        subtitle="Figure 7: Image shift relative to frame 1. The fixed left base patch stays within 1 px, so the rig did not move. The frond median drifts about 44 px (1.46 mm) over 45 frames, and the step at frame 46 is the table bump. The top base patch partly contains fronds, so its spikes follow them and do not show rig movement."></image-component>
+      <br />
+      <image-component tag="fig-displacement" source="assets/displacement.png"
+        subtitle="Figure 8: Frond motion on liquid medium. Left: almost all matched fronds moved under 0.1 mm per 15-minute frame, far below half a frond. Centre: movement towards the nearest wall roughly doubles within about 5 mm of it. Right: the mean drift points the same way across the whole plate, which suggests a slight tilt."></image-component>
+
+      <p>The resolution result answers the expectation in Cox et al. (2022) that stationary Pi systems give lower image
+        quality. At whole-plate framing every camera spreads its pixels over the same 75 mm, so the Canon gave only
+        about 1.5 times more pixels per frond. Its sharper look came mostly from lens and sensor quality, which only
+        matters if hand counts show errors caused by missing detail.</p>
+    </div>
+
+    <div id="s6-4">
+      <h3>6.4. Problems found and responses</h3>
+      <table-component subtitle="Table 9: Problems found during testing">
+        <div class="table-scroll">
+          <table>
+            <tr><th>Problem</th><th>Evidence</th><th>Response</th></tr>
+            <tr><td>Power bank ran out</td><td>Capture stopped after about 30 h</td><td>Mains power through the cable
+                chain</td></tr>
+            <tr><td>Pale fronds missed</td><td>Some faint yellow-green fronds had no outline</td><td>Repeat the hand
+                count on new camera frames (M1) and adjust thresholds if needed</td></tr>
+            <tr><td>Over-splitting</td><td>In region 1, the watershed cut merging errors from 12 to 5 but added 8 false
+                detections, mostly halves of one frond</td><td>Added the merge step, which raised F1 to 0.956</td></tr>
+            <tr><td>Camera tilt</td><td>Sharpness peaked at different lens positions on the left and right of the plate;
+                ruler readings fell from 610 to 598 px along its length; fronds across the whole plate drifted the same
+                way at about 0.1 mm/h</td><td>Stand levelled after the focus test; the gantry tray will be levelled at
+                setup; keep one locked focus</td></tr>
+            <tr><td>Floating fronds drift</td><td>All fronds drifted the same way, and faster within about 5 mm of a
+                wall</td><td>Level the tray; thickened (gel) medium and a lid for the main runs, with a plain-medium
+                growth control (M1)</td></tr>
+            <tr><td>Lid condensation</td><td>Some frames fogged</td><td>Test a hydrophilic lid coating (0.05% Triton
+                X-100 in 20% ethanol for 30 s, as in Cox et al., 2022)</td></tr>
+          </table>
+        </div>
+      </table-component>
+      <image-component tag="fig-focus" source="assets/focus_scores.png"
+        subtitle="Figure 9: Sharpness against lens position for six regions of the plate. The left and right peak at different settings (about 7.5 and 7.0 dioptres), which points to a tilted stand; 7.2 was chosen as the compromise."></image-component>
+      <p>The thickened medium may itself change growth rate. This is why M1 includes a growth control comparing plain
+        and thickened medium before the main runs.</p>
+    </div>
+
+    <br /><sl-divider></sl-divider>
+
+    <!-- ===================== 7. PLAN ===================== -->
+    <div id="s7">
+      <h2>7. Plan to completion</h2>
+      <p>The remaining work follows dependencies: validate the detector on new frames, build and test the gantry, then
+        run the 7-day experiments.</p>
+    </div>
+
+    <div id="s7-1">
+      <h3>7.1. Gantry build status</h3>
+      <table-component subtitle="Table 10: Gantry build status">
+        <table>
+          <tr><th>Part</th><th>Status</th></tr>
+          <tr><td>Printed frame parts</td><td>Printing started</td></tr>
+          <tr><td>Motors, belts, rails and electronics</td><td>Not yet ordered as of 5 Nov 2026</td></tr>
+          <tr><td>Hotend, extruder and heated bed</td><td>Left out of the order on purpose</td></tr>
+          <tr><td>Camera head mount and plate tray</td><td>To design, with the modular interfaces in section 5.4</td></tr>
+        </table>
+      </table-component>
+    </div>
+
+    <div id="s7-2">
+      <h3>7.2. Milestones</h3>
+      <p>Target dates are proposals to be confirmed with the supervisor.</p>
+      <table-component subtitle="Table 11: Milestones">
+        <div class="table-scroll">
+          <table>
+            <tr><th>Milestone</th><th>What "done" means</th><th>Tests</th><th>Target date</th></tr>
+            <tr><td>M1</td><td>Detector validated on new camera frames, including high-density frames; downscaling test
+                confirms the 25 px target; plain versus thickened medium growth control done</td><td>H1</td><td>Mid Dec
+                2026</td></tr>
+            <tr><td>M2</td><td>Gantry parts ordered, printed and assembled; axes moving under Klipper</td><td>None</td>
+              <td>End Dec 2026</td></tr>
+            <tr><td>M3</td><td>Camera head and tray fitted; Pi sends G-code moves and captures all 4 plates; reach and
+                payload verified</td><td>Reach spec</td><td>Mid Jan 2027</td></tr>
+            <tr><td>M4</td><td>Hand-placement baseline measured; gantry repeatability (20 returns per plate), settle time
+                and plate disturbance measured</td><td>H3, H4</td><td>End Jan 2027</td></tr>
+            <tr><td>M5</td><td>First 7-day run: 4 plates, thickened medium, lid on, mains power; starting count per plate
+                set at M1 from the detector's density limit and the collaborator's usual protocol</td><td>Run length,
+                H2</td><td>Mid Feb 2027</td></tr>
+            <tr><td>M6</td><td>Replicated strain comparison and budding interval analysis</td><td>H5</td><td>Mid Mar
+                2027</td></tr>
+            <tr><td>Final</td><td>Failure analysis, open-source release, final report and presentation</td><td>All</td>
+              <td>Apr 2027</td></tr>
+          </table>
+        </div>
+      </table-component>
+      <image-component tag="fig-timeline" source="assets/timeline.png"
+        subtitle="Figure 10: Timeline of the milestones. The orange bars (M1 and M4) are the test gates that must pass before the next stage."></image-component>
+      <p>The gantry tests (M4) come before the first long run (M5), because a run with a camera that drifts or shakes the
+        plates would waste a week.</p>
+    </div>
+
+    <div id="s7-3">
+      <h3>7.3. Risks and fallbacks</h3>
+      <table-component subtitle="Table 12: Risks and fallbacks">
+        <div class="table-scroll">
+          <table>
+            <tr><th>Risk</th><th>Effect</th><th>Fallback</th></tr>
+            <tr><td>Parts delivery or build delays</td><td>M2 to M5 slip</td><td>Order by a fixed date; keep working on M1
+                using the fixed stand while waiting</td></tr>
+            <tr><td>Printed frame not repeatable enough (H3 fails)</td><td>Images do not line up between visits</td>
+              <td>Register each image to the tray fiducials in software; if still too poor, switch to one fixed camera
+                per plate and report H3 as a negative result</td></tr>
+            <tr><td>Gantry moves disturb fronds (H4 fails)</td><td>Tracking breaks after each visit</td><td>Lower
+                acceleration and longer settle time; gel medium; fewer visits per hour</td></tr>
+            <tr><td>Thickened medium changes growth</td><td>Results no longer reflect normal culture</td><td>Growth
+                control in M1; report which medium each result used</td></tr>
+            <tr><td>Dense mats defeat the detector</td><td>Recall falls as plates fill</td><td>Start runs at lower
+                density; report accuracy by density</td></tr>
+            <tr><td>Humidity affects electronics</td><td>Failures mid-run</td><td>Keep electronics outside the growth
+                area; log every capture so failures are diagnosed quickly</td></tr>
+          </table>
+        </div>
+      </table-component>
+    </div>
+
+    <div id="s7-4">
+      <h3>7.4. Response to interim feedback</h3>
+      <p>The panel raised three points. The table shows how each changes the plan.</p>
+      <table-component subtitle="Table 13: Response to interim presentation feedback">
+        <div class="table-scroll">
+          <table>
+            <tr><th>Feedback</th><th>Change made</th></tr>
+            <tr><td>The scope is too small and only solves one person's problem</td><td>Reframed the contribution as a new
+                kind of measurement (individual-level, longitudinal data), with the collaborator's experiments as its
+                first application (sections 1.3 and 2.2)</td></tr>
+            <tr><td>What is next, and what is the scale?</td><td>Low cost reframed as scaling out to parallel units; head
+                and tray designed as swappable modules (section 5.4)</td></tr>
+            <tr><td>Why a gantry instead of fixed cameras or one expensive zoom camera?</td><td>Fixed cameras kept as the
+                fallback and compared directly (H3, H4). Even a manual Zeiss Stemi 508 stereo microscope lists at about
+                $3,900 to $7,100 new (online retailers, November 2026), with no motorised stage or focus, against about
+                S$695 for the whole gantry system; the Axio Zoom.V16 used by Cox et al. (2022) is a motorised research
+                system sold only on quotation</td></tr>
+          </table>
+        </div>
+      </table-component>
+      <p>A possible stretch goal is closed-loop control, where the frond count feeds back into an action on each plate.
+        The simplest first action is topping up medium to replace evaporation, which needs only a small pump. Removing
+        fronds to hold each plate at a set density would be the headline demonstration, but it raises hard problems: a
+        removal tool for 1 mm fronds, disturbance after each intervention and keeping cultures sterile.</p>
+    </div>
+
+    <br /><sl-divider></sl-divider>
+
+    <!-- ===================== 8. CONCLUSION ===================== -->
+    <div id="s8">
+      <h2>8. Conclusion</h2>
+      <p>The camera side of the system is validated, which was the main technical risk of the gantry approach. On a
+        fixed stand, the Pi camera gives about 27 to 30 px per frond, captured 102 of 102 scheduled frames and stayed
+        within 1 px over 15 hours. The detector reached 92% recall and 93% precision on images it was never tuned on.
+        Six of the ten specifications are met.</p>
+      <p>The remaining risk lies in the gantry: whether a printed CoreXY frame returns to each plate repeatably (H3) and
+        whether its moves leave floating fronds undisturbed (H4). Both have defined tests, baselines and a fallback
+        design, so either outcome produces a usable result. If both hold, the 7-day runs in semester 2 will produce
+        individual-level growth data on floating Wolffia from an instrument a lab can afford to replicate.</p>
+    </div>
+
+    <!-- ===================== REFERENCES (APA, alphabetical) ===================== -->
     <div id="references" class="references">
       <sl-divider></sl-divider>
       <h2>References</h2>
       <ul>
-        <li>
-          Brody, J. E. (2007, December 11). Mental reserves keep brain agile. The New York Times. Retrieved from
-          http://www.dowjones.com/factiva/
-        </li>
-        <li>
-          Chamberlin, J., Novotney, A., Packard, E., & Price, M. (2008, May). Enhancing worker well-being: Occupational
-          health psychologists convene to share their research on work, stress, and health. Monitor on Psychology,
-          39(5), 26-29.
-        </li>
-        <li>
-          Jones, T. J., & Fields, N. (2003). Emotional quotient and personality. E-Journal of Applied Psychology, 2(2),
-          38-45. Retrieved from http://ejournalappliedpsyc/index.php/ejap
+        <li>Cox, K. L., Jr., Manchego, J., Meyers, B. C., Czymmek, K. J., &amp; Harkess, A. (2022). Automated imaging of
+          duckweed growth and development. <i>Plant Direct, 6</i>(9), e439. https://doi.org/10.1002/pld3.439</li>
+        <li>ISO. (2005). <i>ISO 20079: Water quality. Determination of the toxic effect of water constituents and waste
+            water on duckweed (Lemna minor). Duckweed growth inhibition test</i>.</li>
+        <li>Kose, T., Lins, T. F., Wang, J., O'Brien, A. M., Sinton, D., &amp; Frederickson, M. E. (2023). Accelerated
+          high-throughput imaging and phenotyping system for small organisms. <i>PLOS ONE, 18</i>(7), e0287739.
+          https://doi.org/10.1371/journal.pone.0287739</li>
+        <li>Li, F., Yang, J.-J., Sun, Z.-Y., Wang, L., et al. (2023). Plant-on-chip: Core morphogenesis processes in the
+          tiny plant <i>Wolffia australiana</i>. <i>PNAS Nexus, 2</i>(5), pgad141.
+          https://doi.org/10.1093/pnasnexus/pgad141</li>
+        <li>MSzturc. (n.d.). <i>THE 100: The world's fastest 3D printer based on a printed frame</i> [Open-source hardware
+          design]. GitHub. Retrieved November 14, 2026, from https://github.com/MSzturc/the100</li>
+        <li>OECD. (2006). <i>Test No. 221: Lemna sp. growth inhibition test</i>. OECD Guidelines for the Testing of
+          Chemicals.</li>
+        <li>Oyeniran, T., Akindipe, B., Islam, T., Scheel, J. D., Oliveira, S. M. D., et al. (2026). Deepweed: Automated
+          individual segmentation and tracking for duckweed lineage analysis. <i>Bioinformatics</i>.</li>
+        <li>Rajesh, S. D., Yadav, N. K., Angom, J., Kumari, N., Campal, E. I., Kalaiselvan, P., Kumar, P., Kakakhel, M. A.,
+          &amp; Patel, A. B. (2026). Wolffia globosa as a multifunctional sustainable bioresource: Applications in
+          aquaculture nutrition, functional foods, and circular bioeconomy. <i>Aquaculture Journal, 6</i>(3), 38.
+          https://doi.org/10.3390/aquacj6030038</li>
+        <li>Subbaraman, B., de Lange, O., Ferguson, S., &amp; Peek, N. (2024). The Duckbot: A system for automated imaging
+          and manipulation of duckweed. <i>PLOS ONE, 19</i>(1), e0296717. https://doi.org/10.1371/journal.pone.0296717
         </li>
       </ul>
     </div>
   </div>
 
-  <!-- This is the code to display the scroll to top button for ergonomic -->
-  <!-- You can leave it as it is, or if you don't like its aesthetics you can also just delete it, -->
-  <!-- but it might reduce the user experience. -->
   <sl-button class="scroll-to-top" variant="primary" size="medium" circle onclick="scrollToTop()">
-    <sl-icon name="arrow-up" label="Settings"></sl-icon>
+    <sl-icon name="arrow-up" label="Scroll to top"></sl-icon>
   </sl-button>
-
-  <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
-  <script type="module" src="./components/table-component/table-component.js"></script>
 </body>
 
 </html>

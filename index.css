@@ -16,3 +16,49 @@ p {
   text-align: justify;
   font-size: 1.1rem;
 }
+
+/* Plain HTML tables used throughout the report.
+   Why: the report has many small tables, which are easier to edit as HTML than as Grid.js data. */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0 8px;
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+th,
+td {
+  border: 1px solid #d0d0d0;
+  padding: 8px 10px;
+  vertical-align: top;
+}
+
+th {
+  background: #f0efec;
+}
+
+/* Status colours in the specification table: green = met, amber = pending */
+td.met {
+  background: #e5f4e4;
+}
+
+td.pending {
+  background: #f9eeda;
+}
+
+/* Wide tables scroll sideways on phones instead of squashing the text */
+.table-scroll {
+  overflow-x: auto;
+}
+
+ul,
+ol {
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.subtitle {
+  color: #555;
+  margin-top: -8px;
+}
